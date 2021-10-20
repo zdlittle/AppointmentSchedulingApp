@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="32.0" layoutY="126.0" prefHeight="204.0" prefWidth="195.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="204.0" prefWidth="85.0" spacing="18.0">
+               <children>
+                  <Label text="ID" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Name" />
+                  <Label layoutX="10.0" layoutY="27.0" text="Inv" />
+                  <Label layoutX="10.0" layoutY="45.0" text="Price/Cost" />
+                  <Label layoutX="10.0" layoutY="62.0" text="Max" />
+                  <Label fx:id="label" layoutX="10.0" layoutY="79.0" text="Machine ID" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="204.0" prefWidth="104.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="partId" disable="true" editable="false" promptText="Auto Gen- Disabled">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="partName" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="partInv" layoutX="10.0" layoutY="35.0" />
+                  <TextField fx:id="partPrice" layoutX="10.0" layoutY="61.0" />
+                  <TextField fx:id="partMax" layoutX="10.0" layoutY="86.0" />
+                  <TextField fx:id="partMachineId" layoutX="10.0" layoutY="111.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="200.0" layoutY="366.0" mnemonicParsing="false" onAction="#SaveButton" text="Save" />
+      <Button layoutX="280.0" layoutY="366.0" mnemonicParsing="false" onAction="#ChangeScene" text="Cancel" />
+      <Label layoutX="48.0" layoutY="58.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="271.0" text="Min" />
+      <TextField fx:id="partMin" layoutX="282.0" layoutY="267.0" prefHeight="25.0" prefWidth="104.0" />
+      <RadioButton fx:id="inHouse" layoutX="146.0" layoutY="60.0" mnemonicParsing="false" onAction="#radioButtonChanged" selected="true" text="In-House" />
+      <RadioButton fx:id="outsourced" layoutX="238.0" layoutY="60.0" mnemonicParsing="false" onAction="#radioButtonChanged" text="Outsourced" />
+   </children>
+</AnchorPane>
